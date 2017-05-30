@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Накорми-ка Иссу</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">               
+                <a class="navbar-brand" href="index.html">Именнице в день рождения</a>
+            </div>            
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Игра
+                    <small>Накорми Иссуню</small>
+                </h1>
+                <p>Каждый день настает тот момент, когда Иссуня хочет есть и само собой угодить ей в полной мере - это ваша задача! <br/> Цель игры держать уровень сытости Иссы не ниже 0, но и не перекормить.</p>                
+            </div>            
+        </div>
+        <!-- /.row -->
+
+        <!-- Image Header -->
+        <div class="row">
+            <div class="text-center">
+                <img src="img/issa1.jpg" style="width: auto;height: 250px" alt="">                  
+            </div>                      
+        </div>
+        <!-- /.row -->
+
+        <!-- Service Panels -->
+        <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+        <div class="row game-field">
+            <div class="col-lg-12 choose-label">
+                <h2 class="page-header">Выберете игровой режим</h2>
+            </div>
+            <div class="col-md-4 col-sm-6 game-type">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Продержаться</h4>
+                        <p>Упрощенный вариант. Ваша задача в течении некоторого времени держать кошку сытой и не перекормленной.</p>
+                        <div id="game1" class="btn btn-primary">Начать!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 game-type">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-rocket fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Ускоренный жор</h4>
+                        <p>Быстрый режим игры. В нем кошка становиться голодной в разы быстрее. Цель та же - накорми беднягу.</p>
+                        <div id="game2" class="btn btn-primary">Начать!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 game-type">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <span class="fa-stack fa-5x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-recycle fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body">
+                        <h4>Съесть все запасы</h4>
+                        <p>Ваша задач как можно быстрее скормить все запасы еды, при этом неперекормив хвостато-мохнатую :)</p>
+                        <div id="game3" class="btn btn-primary">Начать!</div>
+                    </div>
+                </div>
+            </div>            
+        </div>        
+
+        <!-- Service List -->
+        <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+        <div class="row foods hide">
+            <div class="col-lg-12">
+                <h2 class="page-header">Уровень сытости Иссуни.</h2>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                    Кормим, но не перекармливаем!
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-8"></div>
+            <div class="col-lg-12">
+                <h2 class="page-header">Продукты для Иссуни. Кликните на них, чтобы скормить их.</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="media" data-value="3" data-cost="10">
+                    <div class="pull-left">
+                        <img src="img/kotleta.png" style="width: auto;height: 100px" alt="">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Куриный котлетос</h4>
+                        <p>Осталось: <span class="food-level"></span></p>
+                    </div>
+                </div>
+                <div class="media" data-value="7" data-cost="3">
+                    <div class="pull-left">
+                        <img src="img/petrushka.jpg" style="width: auto;height: 100px" alt=""> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Травушка-муравушка</h4>
+                        <p>Осталось: <span class="food-level"></span></p>
+                    </div>
+                </div>
+                <div class="media" data-value="4" data-cost="6">
+                    <div class="pull-left">
+                        <img src="img/hrust.jpg" style="width: auto;height: 100px" alt=""> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Хрустяшки</h4>
+                        <p>Осталось: <span class="food-level"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media" data-value="5" data-cost="7">
+                    <div class="pull-left">
+                        <img src="img/kitekat.jpg" style="width: auto;height: 100px" alt="">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Дешевенький Kitekat</h4>
+                        <p>Осталось: <span class="food-level"></span></p>
+                    </div>
+                </div>
+                <div class="media" data-value="3" data-cost="20">
+                    <div class="pull-left">
+                        <img src="img/royal.png" style="width: auto;height: 100px" alt="">                 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Кормим королевским кормиком</h4>
+                        <p>Осталось: <span class="food-level"></span></p>
+                    </div>
+                </div>
+                <div class="media" data-value="5" data-cost="9">
+                    <div class="pull-left">
+                        <img src="img/banka.jpg" style="width: auto;height: 100px" alt=""> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Тушенка по ГОСТу</h4>
+                        <p>Осталось: <span class="food-level"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media" data-value="2" data-cost="7">
+                    <div class="pull-left">
+                        <img src="img/gray-mouse.jpg" style="width: auto;height: 100px" alt="">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Мышь серая 1 шт.</h4>
+                        <p>Осталось: <span class="food-level"></span></p>
+                    </div>
+                </div>
+                <div class="media" data-value="2" data-cost="9">
+                    <div class="pull-left">
+                        <img src="img/white-mouse.jpg" style="width: auto;height: 100px" alt=""> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Мышь белая 1 шт.</h4>
+                        <p>Осталось: <span class="food-level"></span></p>
+                    </div>
+                </div>
+                <div class="media" data-value="1" data-cost="35">
+                    <div class="pull-left">
+                        <img src="img/meet.jpg" style="width: auto;height: 100px" alt=""> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Свежее мяско</h4>
+                        <p>Осталось: <span class="food-level"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+                <img class="cat-status" src style="width: auto;height: 300px" alt="">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Любимой жене на день рождения 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
